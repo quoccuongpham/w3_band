@@ -9,6 +9,10 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.text-white{
+    color: #fff !important;
+}
+
 
 #main{
 
@@ -190,12 +194,106 @@ html{
 
 #content .member-img:hover {
     border: 8px solid #eee;
+    cursor: pointer;
+    opacity: 0.85;
 }
 
 #content .member-about{
     color: #777;
     margin: 20px auto;
 }
+
+/* Tour section */
+.tour-section{
+    background-color: #000;
+}
+
+.tikets-list{
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+}
+
+.tikets-list li{
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tikets-list .sold-out{
+    background-color: #D9534F;
+    color: #fff;
+    padding: 3px 6px;
+    margin-left: 16px;
+}
+
+.tikets-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+/* Places */
+
+.places-list{
+    margin: 32px -8px 0px;
+    padding-bottom: 48px;
+}
+
+.places-item{
+    float: left;
+    width: calc(100%/3);
+    padding: 0px 8px;
+}
+
+.places-img{
+    width: 100%;
+    display: block;
+}
+
+.places-img:hover{
+    opacity: 0.6;
+}
+
+.places-body{
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+.places-heading{
+    font-size: 15px;
+    font-weight: 600;
+}
+.places-time{
+    margin-top: 15px;
+    color: #757575;
+}
+.places-desc{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+.places-buy-btn{
+    color: #fff;
+    margin-top: 15px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #000;
+    padding: 11px 16px;
+}
+
+.places-buy-btn:hover{
+    background-color: #ccc;
+    color: #fff;
+}
+
+
+/* Footer section */
 
 #footer{
 
