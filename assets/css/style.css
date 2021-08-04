@@ -7,20 +7,55 @@
 
 html{
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
-
+/* Common */
 .text-white{
     color: #fff !important;
 }
+.clear{
+    clear: both;
+}
 
+.row{
+    margin-right: -8px;
+    margin-left: -8px;
+}
 
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.col-hafl{
+    width: 50%;
+}
+
+.col-third{
+    width: calc(100%/3);
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+/* Main */
 #main{
 
 }
 
-.clear{
-    clear: both;
-}
+
 
 #header{
     position: fixed;
@@ -137,7 +172,7 @@ html{
 
 
 #content{
-    min-height: 2000px;
+    
 }
 
 #content .content-section{
@@ -172,12 +207,6 @@ html{
 
 #content .member-list{
     margin-top: 48px;
-}
-
-#content .member-item{
-    float: left;
-    width: calc(100%/3);
-    text-align: center;
 }
 
 #content .member-name{
@@ -242,14 +271,8 @@ html{
 /* Places */
 
 .places-list{
-    margin: 32px -8px 0px;
+    margin-top: 32px;
     padding-bottom: 48px;
-}
-
-.places-item{
-    float: left;
-    width: calc(100%/3);
-    padding: 0px 8px;
 }
 
 .places-img{
@@ -285,20 +308,111 @@ html{
     text-decoration: none;
     background-color: #000;
     padding: 11px 16px;
+    border: none;
 }
 
 .places-buy-btn:hover{
-    background-color: #ccc;
+    background-color: #777;
     color: #fff;
+    cursor: pointer;
+}
+
+/* Contact form*/
+.contact-row{
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.contact-row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.contact-col{
+    float: left;
+    width: 50%;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.contact-content{
+    margin-top: 48px;
+}
+
+.contact-form-control{
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.contact-btn-submit{
+    margin-top: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    padding: 11px 15px;
+    float: right;
+}
+
+.contact-btn-submit:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.contact-info{
+    line-height: 1.6;
+}
+
+.contact-info i[class*="ti-"]{
+    display: inline-block;
+    width: 30px;
+}
+
+/* Map section */
+.map-section img{
+    width: 100%;
+    filter: grayscale(60%);
 }
 
 
 /* Footer section */
 
 #footer{
-
+    padding: 64px 16px;
+    text-align: center;
 }
 
+#footer .socials-list{
+    font-size: 24px;
+}
+
+#footer .socials-list a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .socials-list a:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copywrite{
+    margin-top: 15px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copywrite a{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copywrite a:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/* MODAL BUY TICKET */
 .modal{
     position: fixed;
     top: 0;
@@ -306,9 +420,14 @@ html{
     right: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+    animation: modalFaceIn ease 0.5s;
+}
+
+.modal.open{
+    display: flex;
 }
 
 .modal-container{
@@ -388,4 +507,15 @@ html{
 
 .modal-footer a{
     color: #2196F3;
+}
+
+@keyframes modalFaceIn{
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
