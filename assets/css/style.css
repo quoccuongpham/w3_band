@@ -50,10 +50,11 @@ html{
     text-align: center !important;
 }
 
-/* Main */
-#main{
-
+.mt-16{
+    margin-top: 16px;
 }
+
+
 
 
 
@@ -127,17 +128,33 @@ html{
     
 }
 
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
 #header .search-button{
     float: right;
     padding: 0px 21px;
 }
-
 
 #header .search-button:hover{
     background-color: #f44336;
     cursor: pointer;
 }
 
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover i{
+    color: #000;
+}
+
+#header .menu-icon,
 #header .search-icon{
     color: #fff;
     font-size: 20px;
@@ -171,15 +188,15 @@ html{
 }
 
 
-#content{
-    
-}
 
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     padding: 64px 0px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading{
@@ -271,7 +288,7 @@ html{
 /* Places */
 
 .places-list{
-    margin-top: 32px;
+    margin-top: 16px;
     padding-bottom: 48px;
 }
 
