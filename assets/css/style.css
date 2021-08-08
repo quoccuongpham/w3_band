@@ -87,7 +87,6 @@ html{
 }
 
 #nav li a{
-    
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
@@ -387,6 +386,14 @@ html{
     display: inline-block;
     width: 30px;
 }
+.contact-info a{
+    color: #0000EE;
+    opacity: 0.8;
+}
+.contact-info a:hover{
+    opacity: 1;
+    font-weight: 600;
+}
 
 /* Map section */
 .map-section img{
@@ -440,7 +447,6 @@ html{
     display: none;
     align-items: center;
     justify-content: center;
-    animation: modalFaceIn ease 0.5s;
 }
 
 .modal.open{
@@ -453,6 +459,7 @@ html{
     min-height: 200px;
     position: relative;
     max-width: calc(100% - 32px);
+    animation: modalFaceIn ease 0.5s;
 }
 
 .modal-close{
